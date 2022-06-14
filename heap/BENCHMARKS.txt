@@ -1,0 +1,329 @@
+name                                         old time/op    new time/op    delta
+Heap/size1/preallocated-true/Fill-16           7.37ns ± 4%    3.62ns ± 4%   -50.85%  (p=0.008 n=5+5)
+Heap/size1/preallocated-false/Fill-16          23.3ns ±13%    19.1ns ± 3%   -18.02%  (p=0.008 n=5+5)
+Heap/size1/PopPush-16                          14.2ns ± 3%     7.1ns ± 2%   -49.79%  (p=0.008 n=5+5)
+Heap/size2/preallocated-true/Fill-16           17.4ns ± 4%    10.1ns ± 3%   -42.03%  (p=0.008 n=5+5)
+Heap/size2/preallocated-false/Fill-16          55.5ns ± 4%    47.0ns ± 6%   -15.36%  (p=0.008 n=5+5)
+Heap/size2/PopPush-16                          16.5ns ± 6%    10.4ns ± 7%   -37.30%  (p=0.008 n=5+5)
+Heap/size4/preallocated-true/Fill-16           35.6ns ± 6%    23.5ns ± 4%   -34.08%  (p=0.008 n=5+5)
+Heap/size4/preallocated-false/Fill-16          83.4ns ± 2%    70.9ns ± 4%   -14.98%  (p=0.008 n=5+5)
+Heap/size4/PopPush-16                          23.4ns ± 3%    17.1ns ± 5%   -26.86%  (p=0.008 n=5+5)
+Heap/size8/preallocated-true/Fill-16           73.8ns ± 3%    44.4ns ± 1%   -39.88%  (p=0.008 n=5+5)
+Heap/size8/preallocated-false/Fill-16           165ns ± 2%     133ns ± 6%   -19.20%  (p=0.008 n=5+5)
+Heap/size8/PopPush-16                          29.3ns ± 3%    20.9ns ± 4%   -28.69%  (p=0.008 n=5+5)
+Heap/size16/preallocated-true/Fill-16           147ns ± 1%      94ns ± 1%   -36.45%  (p=0.008 n=5+5)
+Heap/size16/preallocated-false/Fill-16          249ns ± 3%     199ns ± 6%   -20.11%  (p=0.008 n=5+5)
+Heap/size16/PopPush-16                         31.0ns ± 1%    24.2ns ± 2%   -22.05%  (p=0.008 n=5+5)
+Heap/size32/preallocated-true/Fill-16           376ns ± 6%     240ns ± 3%   -36.18%  (p=0.008 n=5+5)
+Heap/size32/preallocated-false/Fill-16          522ns ± 5%     405ns ± 9%   -22.47%  (p=0.016 n=4+5)
+Heap/size32/PopPush-16                         35.6ns ± 2%    25.4ns ± 4%   -28.76%  (p=0.008 n=5+5)
+Heap/size64/preallocated-true/Fill-16           749ns ± 6%     473ns ± 4%   -36.89%  (p=0.008 n=5+5)
+Heap/size64/preallocated-false/Fill-16          957ns ± 2%     677ns ± 1%   -29.26%  (p=0.016 n=5+4)
+Heap/size64/PopPush-16                         39.0ns ± 0%    28.9ns ± 3%   -26.03%  (p=0.016 n=4+5)
+Heap/size128/preallocated-true/Fill-16         1.47µs ± 3%    0.99µs ± 4%   -33.04%  (p=0.008 n=5+5)
+Heap/size128/preallocated-false/Fill-16        1.81µs ± 2%    1.26µs ± 3%   -30.49%  (p=0.008 n=5+5)
+Heap/size128/PopPush-16                        39.1ns ± 0%    31.3ns ± 3%   -20.02%  (p=0.016 n=4+5)
+Heap/size256/preallocated-true/Fill-16         2.98µs ± 4%    1.95µs ± 3%   -34.68%  (p=0.008 n=5+5)
+Heap/size256/preallocated-false/Fill-16        3.38µs ± 1%    2.41µs ± 4%   -28.48%  (p=0.008 n=5+5)
+Heap/size256/PopPush-16                        45.0ns ± 4%    34.2ns ± 1%   -23.90%  (p=0.008 n=5+5)
+Heap/size512/preallocated-true/Fill-16         8.24µs ± 1%    4.19µs ± 2%   -49.19%  (p=0.008 n=5+5)
+Heap/size512/preallocated-false/Fill-16        11.3µs ± 7%     5.0µs ± 2%   -56.07%  (p=0.008 n=5+5)
+Heap/size512/PopPush-16                        60.0ns ± 1%    35.8ns ± 2%   -40.34%  (p=0.008 n=5+5)
+Heap/size1024/preallocated-true/Fill-16        22.6µs ± 1%     8.5µs ± 1%   -62.57%  (p=0.016 n=4+5)
+Heap/size1024/preallocated-false/Fill-16       28.4µs ± 2%    11.4µs ± 2%   -59.81%  (p=0.008 n=5+5)
+Heap/size1024/PopPush-16                       67.4ns ± 2%    41.2ns ± 2%   -38.92%  (p=0.008 n=5+5)
+Heap/size2048/preallocated-true/Fill-16        52.9µs ± 4%    18.8µs ± 0%   -64.46%  (p=0.016 n=5+4)
+Heap/size2048/preallocated-false/Fill-16       61.5µs ± 5%    27.4µs ± 1%   -55.49%  (p=0.008 n=5+5)
+Heap/size2048/PopPush-16                       74.4ns ± 3%    45.2ns ± 3%   -39.31%  (p=0.008 n=5+5)
+Heap/size4096/preallocated-true/Fill-16         112µs ± 4%      53µs ± 2%   -52.74%  (p=0.008 n=5+5)
+Heap/size4096/preallocated-false/Fill-16        129µs ± 3%      65µs ± 1%   -49.28%  (p=0.008 n=5+5)
+Heap/size4096/PopPush-16                       89.8ns ± 1%    59.7ns ± 2%   -33.49%  (p=0.008 n=5+5)
+Heap/size8192/preallocated-true/Fill-16         233µs ± 3%     120µs ± 1%   -48.78%  (p=0.008 n=5+5)
+Heap/size8192/preallocated-false/Fill-16        262µs ± 3%     141µs ± 1%   -45.94%  (p=0.016 n=5+4)
+Heap/size8192/PopPush-16                        108ns ± 6%      73ns ± 2%   -32.37%  (p=0.008 n=5+5)
+Heap/size16384/preallocated-true/Fill-16        483µs ± 2%     242µs ± 2%   -49.93%  (p=0.008 n=5+5)
+Heap/size16384/preallocated-false/Fill-16       530µs ± 3%     289µs ± 3%   -45.51%  (p=0.008 n=5+5)
+Heap/size16384/PopPush-16                       147ns ± 1%     111ns ± 1%   -24.32%  (p=0.008 n=5+5)
+Heap/size32768/preallocated-true/Fill-16        975µs ± 4%     503µs ± 2%   -48.43%  (p=0.008 n=5+5)
+Heap/size32768/preallocated-false/Fill-16      1.12ms ± 1%    0.60ms ± 1%   -46.42%  (p=0.016 n=5+4)
+Heap/size32768/PopPush-16                       163ns ± 2%     129ns ± 4%   -21.11%  (p=0.008 n=5+5)
+Heap/size65536/preallocated-true/Fill-16       1.94ms ± 1%    1.01ms ± 3%   -47.90%  (p=0.008 n=5+5)
+Heap/size65536/preallocated-false/Fill-16      2.19ms ± 2%    1.24ms ± 1%   -43.29%  (p=0.008 n=5+5)
+Heap/size65536/PopPush-16                       174ns ± 2%     139ns ± 3%   -20.17%  (p=0.008 n=5+5)
+Heap/size131072/preallocated-true/Fill-16      3.90ms ± 3%    2.02ms ± 1%   -48.15%  (p=0.008 n=5+5)
+Heap/size131072/preallocated-false/Fill-16     5.34ms ± 3%    2.76ms ± 1%   -48.39%  (p=0.008 n=5+5)
+Heap/size131072/PopPush-16                      189ns ± 0%     152ns ± 3%   -20.00%  (p=0.008 n=5+5)
+Heap/size262144/preallocated-true/Fill-16      7.80ms ± 3%    4.12ms ± 3%   -47.18%  (p=0.008 n=5+5)
+Heap/size262144/preallocated-false/Fill-16     11.0ms ± 1%     5.1ms ± 1%   -53.16%  (p=0.008 n=5+5)
+Heap/size262144/PopPush-16                      211ns ± 3%     165ns ± 2%   -21.81%  (p=0.008 n=5+5)
+Heap/size524288/preallocated-true/Fill-16      15.9ms ± 3%     8.3ms ± 2%   -48.17%  (p=0.008 n=5+5)
+Heap/size524288/preallocated-false/Fill-16     20.7ms ± 3%    11.4ms ±10%   -44.97%  (p=0.008 n=5+5)
+Heap/size524288/PopPush-16                      232ns ± 2%     177ns ± 5%   -23.72%  (p=0.008 n=5+5)
+Heap/size1048576/preallocated-true/Fill-16     31.5ms ± 2%    16.4ms ± 2%   -48.00%  (p=0.008 n=5+5)
+Heap/size1048576/preallocated-false/Fill-16    39.1ms ± 3%    22.4ms ± 3%   -42.76%  (p=0.008 n=5+5)
+Heap/size1048576/PopPush-16                     263ns ± 5%     199ns ± 5%   -24.37%  (p=0.008 n=5+5)
+
+name                                         old alloc/op   new alloc/op   delta
+Heap/size1/preallocated-true/Fill-16            0.00B          0.00B           ~     (all equal)
+Heap/size1/preallocated-false/Fill-16           8.00B ± 0%     8.00B ± 0%      ~     (all equal)
+Heap/size1/PopPush-16                           0.00B          0.00B           ~     (all equal)
+Heap/size2/preallocated-true/Fill-16            0.00B          0.00B           ~     (all equal)
+Heap/size2/preallocated-false/Fill-16           24.0B ± 0%     24.0B ± 0%      ~     (all equal)
+Heap/size2/PopPush-16                           0.00B          0.00B           ~     (all equal)
+Heap/size4/preallocated-true/Fill-16            0.00B          0.00B           ~     (all equal)
+Heap/size4/preallocated-false/Fill-16           56.0B ± 0%     56.0B ± 0%      ~     (all equal)
+Heap/size4/PopPush-16                           0.00B          0.00B           ~     (all equal)
+Heap/size8/preallocated-true/Fill-16            0.00B          0.00B           ~     (all equal)
+Heap/size8/preallocated-false/Fill-16            120B ± 0%      120B ± 0%      ~     (all equal)
+Heap/size8/PopPush-16                           0.00B          0.00B           ~     (all equal)
+Heap/size16/preallocated-true/Fill-16           0.00B          0.00B           ~     (all equal)
+Heap/size16/preallocated-false/Fill-16           248B ± 0%      248B ± 0%      ~     (all equal)
+Heap/size16/PopPush-16                          0.00B          0.00B           ~     (all equal)
+Heap/size32/preallocated-true/Fill-16           0.00B          0.00B           ~     (all equal)
+Heap/size32/preallocated-false/Fill-16           504B ± 0%      504B ± 0%      ~     (all equal)
+Heap/size32/PopPush-16                          0.00B          0.00B           ~     (all equal)
+Heap/size64/preallocated-true/Fill-16           0.00B          0.00B           ~     (all equal)
+Heap/size64/preallocated-false/Fill-16         1.02kB ± 0%    1.02kB ± 0%      ~     (all equal)
+Heap/size64/PopPush-16                          0.00B          0.00B           ~     (all equal)
+Heap/size128/preallocated-true/Fill-16          0.00B          0.00B           ~     (all equal)
+Heap/size128/preallocated-false/Fill-16        2.04kB ± 0%    2.04kB ± 0%      ~     (all equal)
+Heap/size128/PopPush-16                         0.00B          0.00B           ~     (all equal)
+Heap/size256/preallocated-true/Fill-16          0.00B          0.00B           ~     (all equal)
+Heap/size256/preallocated-false/Fill-16        4.09kB ± 0%    4.09kB ± 0%      ~     (all equal)
+Heap/size256/PopPush-16                         0.00B          0.00B           ~     (all equal)
+Heap/size512/preallocated-true/Fill-16         2.05kB ± 0%    0.00kB       -100.00%  (p=0.008 n=5+5)
+Heap/size512/preallocated-false/Fill-16        10.2kB ± 0%     8.2kB ± 0%   -20.02%  (p=0.008 n=5+5)
+Heap/size512/PopPush-16                         7.00B ± 0%     0.00B       -100.00%  (p=0.008 n=5+5)
+Heap/size1024/preallocated-true/Fill-16        6.14kB ± 0%    0.00kB       -100.00%  (p=0.008 n=5+5)
+Heap/size1024/preallocated-false/Fill-16       31.4kB ± 0%    25.2kB ± 0%   -19.60%  (p=0.008 n=5+5)
+Heap/size1024/PopPush-16                        11.0B ± 0%      0.0B       -100.00%  (p=0.008 n=5+5)
+Heap/size2048/preallocated-true/Fill-16        14.3kB ± 0%     0.0kB       -100.00%  (p=0.008 n=5+5)
+Heap/size2048/preallocated-false/Fill-16       74.4kB ± 0%    60.0kB ± 0%   -19.28%  (p=0.008 n=5+5)
+Heap/size2048/PopPush-16                        13.0B ± 0%      0.0B       -100.00%  (p=0.008 n=5+5)
+Heap/size4096/preallocated-true/Fill-16        30.7kB ± 0%     0.0kB       -100.00%  (p=0.008 n=5+5)
+Heap/size4096/preallocated-false/Fill-16        159kB ± 0%     128kB ± 0%   -19.32%  (p=0.008 n=5+5)
+Heap/size4096/PopPush-16                        14.0B ± 0%      0.0B       -100.00%  (p=0.008 n=5+5)
+Heap/size8192/preallocated-true/Fill-16        63.5kB ± 0%     0.0kB       -100.00%  (p=0.008 n=5+5)
+Heap/size8192/preallocated-false/Fill-16        323kB ± 0%     259kB ± 0%   -19.67%  (p=0.000 n=5+4)
+Heap/size8192/PopPush-16                        15.0B ± 0%      0.0B       -100.00%  (p=0.008 n=5+5)
+Heap/size16384/preallocated-true/Fill-16        129kB ± 0%       0kB       -100.00%  (p=0.008 n=5+5)
+Heap/size16384/preallocated-false/Fill-16       618kB ± 0%     489kB ± 0%      ~     (p=0.079 n=4+5)
+Heap/size16384/PopPush-16                       15.0B ± 0%      0.0B       -100.00%  (p=0.008 n=5+5)
+Heap/size32768/preallocated-true/Fill-16        260kB ± 0%       0kB       -100.00%  (p=0.008 n=5+5)
+Heap/size32768/preallocated-false/Fill-16      1.42MB ± 0%    1.16MB ± 0%   -18.31%  (p=0.000 n=5+4)
+Heap/size32768/PopPush-16                       15.0B ± 0%      0.0B       -100.00%  (p=0.008 n=5+5)
+Heap/size65536/preallocated-true/Fill-16        522kB ± 0%       0kB       -100.00%  (p=0.008 n=5+5)
+Heap/size65536/preallocated-false/Fill-16      3.03MB ± 0%    2.51MB ± 0%   -17.21%  (p=0.008 n=5+5)
+Heap/size65536/PopPush-16                       15.0B ± 0%      0.0B       -100.00%  (p=0.008 n=5+5)
+Heap/size131072/preallocated-true/Fill-16      1.05MB ± 0%    0.00MB           ~     (p=0.079 n=4+5)
+Heap/size131072/preallocated-false/Fill-16     6.26MB ± 0%    5.22MB ± 0%   -16.71%  (p=0.008 n=5+5)
+Heap/size131072/PopPush-16                      15.0B ± 0%      0.0B       -100.00%  (p=0.008 n=5+5)
+Heap/size262144/preallocated-true/Fill-16      2.10MB ± 0%    0.00MB       -100.00%  (p=0.008 n=5+5)
+Heap/size262144/preallocated-false/Fill-16     12.7MB ± 0%    10.6MB ± 0%   -16.55%  (p=0.008 n=5+5)
+Heap/size262144/PopPush-16                      15.0B ± 0%      0.0B       -100.00%  (p=0.008 n=5+5)
+Heap/size524288/preallocated-true/Fill-16      4.19MB ± 0%    0.00MB       -100.00%  (p=0.008 n=5+5)
+Heap/size524288/preallocated-false/Fill-16     25.3MB ± 0%    21.1MB ± 0%   -16.59%  (p=0.008 n=5+5)
+Heap/size524288/PopPush-16                      15.0B ± 0%      0.0B       -100.00%  (p=0.008 n=5+5)
+Heap/size1048576/preallocated-true/Fill-16     8.39MB ± 0%    0.00MB       -100.00%  (p=0.008 n=5+5)
+Heap/size1048576/preallocated-false/Fill-16    50.1MB ± 0%    41.7MB ± 0%   -16.75%  (p=0.008 n=5+5)
+Heap/size1048576/PopPush-16                     15.0B ± 0%      0.0B       -100.00%  (p=0.008 n=5+5)
+
+name                                         old allocs/op  new allocs/op  delta
+Heap/size1/preallocated-true/Fill-16             0.00           0.00           ~     (all equal)
+Heap/size1/preallocated-false/Fill-16            1.00 ± 0%      1.00 ± 0%      ~     (all equal)
+Heap/size1/PopPush-16                            0.00           0.00           ~     (all equal)
+Heap/size2/preallocated-true/Fill-16             0.00           0.00           ~     (all equal)
+Heap/size2/preallocated-false/Fill-16            2.00 ± 0%      2.00 ± 0%      ~     (all equal)
+Heap/size2/PopPush-16                            0.00           0.00           ~     (all equal)
+Heap/size4/preallocated-true/Fill-16             0.00           0.00           ~     (all equal)
+Heap/size4/preallocated-false/Fill-16            3.00 ± 0%      3.00 ± 0%      ~     (all equal)
+Heap/size4/PopPush-16                            0.00           0.00           ~     (all equal)
+Heap/size8/preallocated-true/Fill-16             0.00           0.00           ~     (all equal)
+Heap/size8/preallocated-false/Fill-16            4.00 ± 0%      4.00 ± 0%      ~     (all equal)
+Heap/size8/PopPush-16                            0.00           0.00           ~     (all equal)
+Heap/size16/preallocated-true/Fill-16            0.00           0.00           ~     (all equal)
+Heap/size16/preallocated-false/Fill-16           5.00 ± 0%      5.00 ± 0%      ~     (all equal)
+Heap/size16/PopPush-16                           0.00           0.00           ~     (all equal)
+Heap/size32/preallocated-true/Fill-16            0.00           0.00           ~     (all equal)
+Heap/size32/preallocated-false/Fill-16           6.00 ± 0%      6.00 ± 0%      ~     (all equal)
+Heap/size32/PopPush-16                           0.00           0.00           ~     (all equal)
+Heap/size64/preallocated-true/Fill-16            0.00           0.00           ~     (all equal)
+Heap/size64/preallocated-false/Fill-16           7.00 ± 0%      7.00 ± 0%      ~     (all equal)
+Heap/size64/PopPush-16                           0.00           0.00           ~     (all equal)
+Heap/size128/preallocated-true/Fill-16           0.00           0.00           ~     (all equal)
+Heap/size128/preallocated-false/Fill-16          8.00 ± 0%      8.00 ± 0%      ~     (all equal)
+Heap/size128/PopPush-16                          0.00           0.00           ~     (all equal)
+Heap/size256/preallocated-true/Fill-16           0.00           0.00           ~     (all equal)
+Heap/size256/preallocated-false/Fill-16          9.00 ± 0%      9.00 ± 0%      ~     (all equal)
+Heap/size256/PopPush-16                          0.00           0.00           ~     (all equal)
+Heap/size512/preallocated-true/Fill-16            256 ± 0%         0       -100.00%  (p=0.008 n=5+5)
+Heap/size512/preallocated-false/Fill-16           266 ± 0%        10 ± 0%   -96.24%  (p=0.008 n=5+5)
+Heap/size512/PopPush-16                          0.00           0.00           ~     (all equal)
+Heap/size1024/preallocated-true/Fill-16           768 ± 0%         0       -100.00%  (p=0.008 n=5+5)
+Heap/size1024/preallocated-false/Fill-16          780 ± 0%        12 ± 0%   -98.46%  (p=0.008 n=5+5)
+Heap/size1024/PopPush-16                         1.00 ± 0%      0.00       -100.00%  (p=0.008 n=5+5)
+Heap/size2048/preallocated-true/Fill-16         1.79k ± 0%     0.00k       -100.00%  (p=0.008 n=5+5)
+Heap/size2048/preallocated-false/Fill-16        1.81k ± 0%     0.01k ± 0%   -99.22%  (p=0.008 n=5+5)
+Heap/size2048/PopPush-16                         1.00 ± 0%      0.00       -100.00%  (p=0.008 n=5+5)
+Heap/size4096/preallocated-true/Fill-16         3.84k ± 0%     0.00k       -100.00%  (p=0.008 n=5+5)
+Heap/size4096/preallocated-false/Fill-16        3.86k ± 0%     0.02k ± 0%   -99.59%  (p=0.008 n=5+5)
+Heap/size4096/PopPush-16                         1.00 ± 0%      0.00       -100.00%  (p=0.008 n=5+5)
+Heap/size8192/preallocated-true/Fill-16         7.94k ± 0%     0.00k       -100.00%  (p=0.008 n=5+5)
+Heap/size8192/preallocated-false/Fill-16        7.95k ± 0%     0.02k ± 0%   -99.77%  (p=0.008 n=5+5)
+Heap/size8192/PopPush-16                         1.00 ± 0%      0.00       -100.00%  (p=0.008 n=5+5)
+Heap/size16384/preallocated-true/Fill-16        16.1k ± 0%      0.0k       -100.00%  (p=0.008 n=5+5)
+Heap/size16384/preallocated-false/Fill-16       16.1k ± 0%      0.0k ± 0%   -99.88%  (p=0.008 n=5+5)
+Heap/size16384/PopPush-16                        1.00 ± 0%      0.00       -100.00%  (p=0.008 n=5+5)
+Heap/size32768/preallocated-true/Fill-16        32.5k ± 0%      0.0k       -100.00%  (p=0.008 n=5+5)
+Heap/size32768/preallocated-false/Fill-16       32.5k ± 0%      0.0k ± 0%   -99.93%  (p=0.008 n=5+5)
+Heap/size32768/PopPush-16                        1.00 ± 0%      0.00       -100.00%  (p=0.008 n=5+5)
+Heap/size65536/preallocated-true/Fill-16        65.3k ± 0%      0.0k       -100.00%  (p=0.008 n=5+5)
+Heap/size65536/preallocated-false/Fill-16       65.3k ± 0%      0.0k ± 0%   -99.96%  (p=0.008 n=5+5)
+Heap/size65536/PopPush-16                        1.00 ± 0%      0.00       -100.00%  (p=0.008 n=5+5)
+Heap/size131072/preallocated-true/Fill-16        131k ± 0%        0k       -100.00%  (p=0.008 n=5+5)
+Heap/size131072/preallocated-false/Fill-16       131k ± 0%        0k ± 0%   -99.98%  (p=0.008 n=5+5)
+Heap/size131072/PopPush-16                       1.00 ± 0%      0.00       -100.00%  (p=0.008 n=5+5)
+Heap/size262144/preallocated-true/Fill-16        262k ± 0%        0k       -100.00%  (p=0.008 n=5+5)
+Heap/size262144/preallocated-false/Fill-16       262k ± 0%        0k ± 0%   -99.99%  (p=0.008 n=5+5)
+Heap/size262144/PopPush-16                       1.00 ± 0%      0.00       -100.00%  (p=0.008 n=5+5)
+Heap/size524288/preallocated-true/Fill-16        524k ± 0%        0k       -100.00%  (p=0.008 n=5+5)
+Heap/size524288/preallocated-false/Fill-16       524k ± 0%        0k ± 0%   -99.99%  (p=0.008 n=5+5)
+Heap/size524288/PopPush-16                       1.00 ± 0%      0.00       -100.00%  (p=0.008 n=5+5)
+Heap/size1048576/preallocated-true/Fill-16      1.05M ± 0%     0.00M       -100.00%  (p=0.008 n=5+5)
+Heap/size1048576/preallocated-false/Fill-16     1.05M ± 0%     0.00M ± 0%  -100.00%  (p=0.008 n=5+5)
+Heap/size1048576/PopPush-16                      1.00 ± 0%      0.00       -100.00%  (p=0.008 n=5+5)
+----------
+
+goos: linux
+goarch: amd64
+pkg: github.com/go-ng/container/heap
+cpu: 11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz
+BenchmarkDup-16        	    9838	    118593 ns/op
+BenchmarkStdHeap/size1/preallocated-true/Fill-16    	179464528	         7.045 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStdHeap/size1/preallocated-false/Fill-16   	52137418	        21.92 ns/op	       8 B/op	       1 allocs/op
+BenchmarkStdHeap/size1/PopPush-16                   	94452512	        11.89 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStdHeap/size2/preallocated-true/Fill-16    	69764581	        17.39 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStdHeap/size2/preallocated-false/Fill-16   	25305950	        47.91 ns/op	      24 B/op	       2 allocs/op
+BenchmarkStdHeap/size2/PopPush-16                   	82671404	        15.51 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStdHeap/size4/preallocated-true/Fill-16    	31344577	        36.92 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStdHeap/size4/preallocated-false/Fill-16   	13939447	        88.40 ns/op	      56 B/op	       3 allocs/op
+BenchmarkStdHeap/size4/PopPush-16                   	51014679	        25.42 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStdHeap/size8/preallocated-true/Fill-16    	17156256	        72.19 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStdHeap/size8/preallocated-false/Fill-16   	 6811657	       158.8 ns/op	     120 B/op	       4 allocs/op
+BenchmarkStdHeap/size8/PopPush-16                   	38941969	        32.70 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStdHeap/size16/preallocated-true/Fill-16   	 8592566	       135.5 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStdHeap/size16/preallocated-false/Fill-16  	 4686805	       266.2 ns/op	     248 B/op	       5 allocs/op
+BenchmarkStdHeap/size16/PopPush-16                  	30015013	        41.78 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStdHeap/size32/preallocated-true/Fill-16   	 3396867	       329.0 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStdHeap/size32/preallocated-false/Fill-16  	 2307477	       529.9 ns/op	     504 B/op	       6 allocs/op
+BenchmarkStdHeap/size32/PopPush-16                  	23933293	        53.23 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStdHeap/size64/preallocated-true/Fill-16   	 1697702	       705.3 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStdHeap/size64/preallocated-false/Fill-16  	 1307751	       892.0 ns/op	    1016 B/op	       7 allocs/op
+BenchmarkStdHeap/size64/PopPush-16                  	20023557	        61.55 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStdHeap/size128/preallocated-true/Fill-16  	  796980	      1440 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStdHeap/size128/preallocated-false/Fill-16 	  608306	      2022 ns/op	    2040 B/op	       8 allocs/op
+BenchmarkStdHeap/size128/PopPush-16                 	17949700	        69.50 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStdHeap/size256/preallocated-true/Fill-16  	  423996	      2897 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStdHeap/size256/preallocated-false/Fill-16 	  346910	      3429 ns/op	    4088 B/op	       9 allocs/op
+BenchmarkStdHeap/size256/PopPush-16                 	16137673	        76.50 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStdHeap/size512/preallocated-true/Fill-16  	  140275	      8254 ns/op	    2048 B/op	     256 allocs/op
+BenchmarkStdHeap/size512/preallocated-false/Fill-16 	   98080	     13007 ns/op	   10232 B/op	     266 allocs/op
+BenchmarkStdHeap/size512/PopPush-16                 	14467765	        82.12 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStdHeap/size1024/preallocated-true/Fill-16 	   54116	     22122 ns/op	    6144 B/op	     768 allocs/op
+BenchmarkStdHeap/size1024/preallocated-false/Fill-16         	   44193	     27915 ns/op	   31352 B/op	     780 allocs/op
+BenchmarkStdHeap/size1024/PopPush-16                         	11482150	        98.51 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStdHeap/size2048/preallocated-true/Fill-16          	   21099	     56075 ns/op	   14336 B/op	    1792 allocs/op
+BenchmarkStdHeap/size2048/preallocated-false/Fill-16         	   20090	     62306 ns/op	   74360 B/op	    1806 allocs/op
+BenchmarkStdHeap/size2048/PopPush-16                         	11153845	       113.8 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStdHeap/size4096/preallocated-true/Fill-16          	    9582	    115924 ns/op	   30720 B/op	    3840 allocs/op
+BenchmarkStdHeap/size4096/preallocated-false/Fill-16         	    8402	    129249 ns/op	  158968 B/op	    3856 allocs/op
+BenchmarkStdHeap/size4096/PopPush-16                         	10333945	       117.7 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStdHeap/size8192/preallocated-true/Fill-16          	    4950	    234589 ns/op	   63488 B/op	    7936 allocs/op
+BenchmarkStdHeap/size8192/preallocated-false/Fill-16         	    4294	    259342 ns/op	  322809 B/op	    7954 allocs/op
+BenchmarkStdHeap/size8192/PopPush-16                         	 9478213	       128.0 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStdHeap/size16384/preallocated-true/Fill-16         	    2461	    472789 ns/op	  129024 B/op	   16128 allocs/op
+BenchmarkStdHeap/size16384/preallocated-false/Fill-16        	    2341	    525771 ns/op	  617722 B/op	   16148 allocs/op
+BenchmarkStdHeap/size16384/PopPush-16                        	 8850633	       134.1 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStdHeap/size32768/preallocated-true/Fill-16         	    1228	    955208 ns/op	  260097 B/op	   32512 allocs/op
+BenchmarkStdHeap/size32768/preallocated-false/Fill-16        	    1070	   1119521 ns/op	 1420543 B/op	   32535 allocs/op
+BenchmarkStdHeap/size32768/PopPush-16                        	 8233328	       143.1 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStdHeap/size65536/preallocated-true/Fill-16         	     614	   1940689 ns/op	  522241 B/op	   65280 allocs/op
+BenchmarkStdHeap/size65536/preallocated-false/Fill-16        	     529	   2233594 ns/op	 3034378 B/op	   65306 allocs/op
+BenchmarkStdHeap/size65536/PopPush-16                        	 7790013	       154.1 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStdHeap/size131072/preallocated-true/Fill-16        	     292	   4595978 ns/op	 1046534 B/op	  130816 allocs/op
+BenchmarkStdHeap/size131072/preallocated-false/Fill-16       	     180	   6614439 ns/op	 6262044 B/op	  130845 allocs/op
+BenchmarkStdHeap/size131072/PopPush-16                       	 6992901	       176.4 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStdHeap/size262144/preallocated-true/Fill-16        	     150	   7968817 ns/op	 2095110 B/op	  261888 allocs/op
+BenchmarkStdHeap/size262144/preallocated-false/Fill-16       	      96	  10803321 ns/op	12659988 B/op	  261920 allocs/op
+BenchmarkStdHeap/size262144/PopPush-16                       	 6752614	       171.9 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStdHeap/size524288/preallocated-true/Fill-16        	      72	  15854370 ns/op	 4192262 B/op	  524032 allocs/op
+BenchmarkStdHeap/size524288/preallocated-false/Fill-16       	      61	  20956555 ns/op	25275676 B/op	  524067 allocs/op
+BenchmarkStdHeap/size524288/PopPush-16                       	 6263661	       189.7 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStdHeap/size1048576/preallocated-true/Fill-16       	      34	  32399618 ns/op	 8386567 B/op	 1048320 allocs/op
+BenchmarkStdHeap/size1048576/preallocated-false/Fill-16      	      27	  38735612 ns/op	50064669 B/op	 1048358 allocs/op
+BenchmarkStdHeap/size1048576/PopPush-16                      	 6019054	       202.7 ns/op	       0 B/op	       0 allocs/op
+BenchmarkOurHeap/size1/preallocated-true/Fill-16             	352856257	         3.411 ns/op	       0 B/op	       0 allocs/op
+BenchmarkOurHeap/size1/preallocated-false/Fill-16            	64107060	        17.56 ns/op	       8 B/op	       1 allocs/op
+BenchmarkOurHeap/size1/PopPush-16                            	206326190	         5.858 ns/op	       0 B/op	       0 allocs/op
+BenchmarkOurHeap/size2/preallocated-true/Fill-16             	129254493	         9.354 ns/op	       0 B/op	       0 allocs/op
+BenchmarkOurHeap/size2/preallocated-false/Fill-16            	29046067	        40.05 ns/op	      24 B/op	       2 allocs/op
+BenchmarkOurHeap/size2/PopPush-16                            	131639011	         8.944 ns/op	       0 B/op	       0 allocs/op
+BenchmarkOurHeap/size4/preallocated-true/Fill-16             	55436422	        22.07 ns/op	       0 B/op	       0 allocs/op
+BenchmarkOurHeap/size4/preallocated-false/Fill-16            	15744127	        77.16 ns/op	      56 B/op	       3 allocs/op
+BenchmarkOurHeap/size4/PopPush-16                            	66605299	        17.16 ns/op	       0 B/op	       0 allocs/op
+BenchmarkOurHeap/size8/preallocated-true/Fill-16             	27433786	        46.91 ns/op	       0 B/op	       0 allocs/op
+BenchmarkOurHeap/size8/preallocated-false/Fill-16            	 8837259	       139.2 ns/op	     120 B/op	       4 allocs/op
+BenchmarkOurHeap/size8/PopPush-16                            	43125285	        25.85 ns/op	       0 B/op	       0 allocs/op
+BenchmarkOurHeap/size16/preallocated-true/Fill-16            	14001319	        90.39 ns/op	       0 B/op	       0 allocs/op
+BenchmarkOurHeap/size16/preallocated-false/Fill-16           	 5495814	       214.1 ns/op	     248 B/op	       5 allocs/op
+BenchmarkOurHeap/size16/PopPush-16                           	34690927	        34.35 ns/op	       0 B/op	       0 allocs/op
+BenchmarkOurHeap/size32/preallocated-true/Fill-16            	 5207384	       235.8 ns/op	       0 B/op	       0 allocs/op
+BenchmarkOurHeap/size32/preallocated-false/Fill-16           	 2985267	       391.9 ns/op	     504 B/op	       6 allocs/op
+BenchmarkOurHeap/size32/PopPush-16                           	29597532	        41.84 ns/op	       0 B/op	       0 allocs/op
+BenchmarkOurHeap/size64/preallocated-true/Fill-16            	 2441011	       477.7 ns/op	       0 B/op	       0 allocs/op
+BenchmarkOurHeap/size64/preallocated-false/Fill-16           	 1694653	       703.7 ns/op	    1016 B/op	       7 allocs/op
+BenchmarkOurHeap/size64/PopPush-16                           	25139220	        50.01 ns/op	       0 B/op	       0 allocs/op
+BenchmarkOurHeap/size128/preallocated-true/Fill-16           	 1000000	      1025 ns/op	       0 B/op	       0 allocs/op
+BenchmarkOurHeap/size128/preallocated-false/Fill-16          	  818797	      1343 ns/op	    2040 B/op	       8 allocs/op
+BenchmarkOurHeap/size128/PopPush-16                          	21224200	        58.41 ns/op	       0 B/op	       0 allocs/op
+BenchmarkOurHeap/size256/preallocated-true/Fill-16           	  592292	      2147 ns/op	       0 B/op	       0 allocs/op
+BenchmarkOurHeap/size256/preallocated-false/Fill-16          	  399506	      2578 ns/op	    4088 B/op	       9 allocs/op
+BenchmarkOurHeap/size256/PopPush-16                          	17900796	        68.16 ns/op	       0 B/op	       0 allocs/op
+BenchmarkOurHeap/size512/preallocated-true/Fill-16           	  222822	      4581 ns/op	       0 B/op	       0 allocs/op
+BenchmarkOurHeap/size512/preallocated-false/Fill-16          	  178536	      6193 ns/op	    8184 B/op	      10 allocs/op
+BenchmarkOurHeap/size512/PopPush-16                          	16270057	        74.29 ns/op	       0 B/op	       0 allocs/op
+BenchmarkOurHeap/size1024/preallocated-true/Fill-16          	  139200	      8609 ns/op	       0 B/op	       0 allocs/op
+BenchmarkOurHeap/size1024/preallocated-false/Fill-16         	  100201	     12058 ns/op	   25208 B/op	      12 allocs/op
+BenchmarkOurHeap/size1024/PopPush-16                         	14723139	        80.57 ns/op	       0 B/op	       0 allocs/op
+BenchmarkOurHeap/size2048/preallocated-true/Fill-16          	   62475	     18681 ns/op	       0 B/op	       0 allocs/op
+BenchmarkOurHeap/size2048/preallocated-false/Fill-16         	   42550	     30568 ns/op	   60024 B/op	      14 allocs/op
+BenchmarkOurHeap/size2048/PopPush-16                         	13042672	       109.6 ns/op	       0 B/op	       0 allocs/op
+BenchmarkOurHeap/size4096/preallocated-true/Fill-16          	   21093	     52716 ns/op	       0 B/op	       0 allocs/op
+BenchmarkOurHeap/size4096/preallocated-false/Fill-16         	   16882	     68716 ns/op	  128248 B/op	      16 allocs/op
+BenchmarkOurHeap/size4096/PopPush-16                         	12263584	       103.8 ns/op	       0 B/op	       0 allocs/op
+BenchmarkOurHeap/size8192/preallocated-true/Fill-16          	   10000	    120598 ns/op	       0 B/op	       0 allocs/op
+BenchmarkOurHeap/size8192/preallocated-false/Fill-16         	    7401	    149075 ns/op	  259321 B/op	      18 allocs/op
+BenchmarkOurHeap/size8192/PopPush-16                         	10682568	       113.3 ns/op	       0 B/op	       0 allocs/op
+BenchmarkOurHeap/size16384/preallocated-true/Fill-16         	    4566	    253863 ns/op	       0 B/op	       0 allocs/op
+BenchmarkOurHeap/size16384/preallocated-false/Fill-16        	    3900	    300292 ns/op	  488698 B/op	      20 allocs/op
+BenchmarkOurHeap/size16384/PopPush-16                        	10042627	       118.8 ns/op	       0 B/op	       0 allocs/op
+BenchmarkOurHeap/size32768/preallocated-true/Fill-16         	    2440	    514096 ns/op	       0 B/op	       0 allocs/op
+BenchmarkOurHeap/size32768/preallocated-false/Fill-16        	    1875	    616834 ns/op	 1160447 B/op	      23 allocs/op
+BenchmarkOurHeap/size32768/PopPush-16                        	 9882728	       130.6 ns/op	       0 B/op	       0 allocs/op
+BenchmarkOurHeap/size65536/preallocated-true/Fill-16         	    1176	   1066324 ns/op	       0 B/op	       0 allocs/op
+BenchmarkOurHeap/size65536/preallocated-false/Fill-16        	     932	   1354944 ns/op	 2512139 B/op	      26 allocs/op
+BenchmarkOurHeap/size65536/PopPush-16                        	 8507810	       138.1 ns/op	       0 B/op	       0 allocs/op
+BenchmarkOurHeap/size131072/preallocated-true/Fill-16        	     560	   2079507 ns/op	       0 B/op	       0 allocs/op
+BenchmarkOurHeap/size131072/preallocated-false/Fill-16       	     416	   3056108 ns/op	 5215505 B/op	      29 allocs/op
+BenchmarkOurHeap/size131072/PopPush-16                       	 7720981	       150.3 ns/op	       0 B/op	       0 allocs/op
+BenchmarkOurHeap/size262144/preallocated-true/Fill-16        	     274	   4379507 ns/op	       0 B/op	       0 allocs/op
+BenchmarkOurHeap/size262144/preallocated-false/Fill-16       	     187	   5995401 ns/op	10564873 B/op	      32 allocs/op
+BenchmarkOurHeap/size262144/PopPush-16                       	 7569838	       162.9 ns/op	       0 B/op	       0 allocs/op
+BenchmarkOurHeap/size524288/preallocated-true/Fill-16        	     135	   8883724 ns/op	       0 B/op	       0 allocs/op
+BenchmarkOurHeap/size524288/preallocated-false/Fill-16       	      94	  12603915 ns/op	21083394 B/op	      35 allocs/op
+BenchmarkOurHeap/size524288/PopPush-16                       	 7020883	       173.9 ns/op	       0 B/op	       0 allocs/op
+BenchmarkOurHeap/size1048576/preallocated-true/Fill-16       	      69	  17361982 ns/op	       0 B/op	       0 allocs/op
+BenchmarkOurHeap/size1048576/preallocated-false/Fill-16      	      46	  23690978 ns/op	41678107 B/op	      38 allocs/op
+BenchmarkOurHeap/size1048576/PopPush-16                      	 6476004	       185.6 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	github.com/go-ng/container/heap	180.170s
