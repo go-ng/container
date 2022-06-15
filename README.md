@@ -60,10 +60,10 @@ type IntHeap []int
 func (h IntHeap) Less(i, j int) bool { return h[i] < h[j] }
 	
 func main() {
-	h := []int{2, 1, 5}
+	h := IntHeap{2, 1, 5}
 	heap.Init(&h)
 	heap.Push(&h, 3)
-	fmt.Printf("minimum: %d\n", (*h)[0])
+	fmt.Printf("minimum: %d\n", h[0])
 	for len(h) > 0 {
 		fmt.Printf("%d ", heap.Pop(&h)) // Pop will return an `int`, not an `interface{}`
 	}
